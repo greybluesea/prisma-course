@@ -8,11 +8,19 @@ datasource db {
 }
 
 model User {
-  id     Int     @id @default(autoincrement())
+  id     Int      @default(autoincrement())
   email String   @unique
   name String
-  role String
+  role Role? @default(USER)
 
 
   @@map("users")
+  @@id([email,name])
+  @@index([id,email])
+  @@unique([name,role])
+}
+
+enum Role {
+  USER
+  ADMIN
 }
