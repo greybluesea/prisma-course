@@ -35,12 +35,16 @@ model Profile {
 
 model Post {
   id Int @id @default(autoincrement())
+  title String
   authorId Int?
   author User? @relation(fields: [authorId], references: [id])
-  title String
+  
   creaatedAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   published Boolean @default(false)
+
+  likeNum Int @default(0)
+  
   categories Category[]
 }
 
