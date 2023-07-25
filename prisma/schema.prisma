@@ -15,7 +15,7 @@ model User {
   profile Profile?
   posts Post[]
 
-  @@map("users")
+   @@map("users")
  
   @@index([id,email])
   @@unique([name,role])
@@ -35,8 +35,8 @@ model Profile {
 
 model Post {
   id Int @id @default(autoincrement())
-  authorId Int @unique 
-  author User @relation(fields: [authorId], references: [id])
+  authorId Int?
+  author User? @relation(fields: [authorId], references: [id])
   title String
   creaatedAt DateTime @default(now())
   updatedAt DateTime @updatedAt
