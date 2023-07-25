@@ -15,7 +15,7 @@ model User {
   profile Profile?
   posts Post[]
 
-   @@map("users")
+  // @@map("users")
  
   @@index([id,email])
   @@unique([name,role])
