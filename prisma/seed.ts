@@ -11,7 +11,7 @@ const userData: Prisma.UserCreateInput[] = [
         {
           title: "Join the Prisma Slack",
           published: true,
-          /* likeNum: 10, */
+          likeNum: 10,
           categories: {
             create: [
               {
