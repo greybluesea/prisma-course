@@ -18,7 +18,7 @@ model User {
   // @@map("users")
  
   @@index([id,email])
-  @@unique([name,role])
+  // @@unique([name,role])
 }
 
 enum Role {
