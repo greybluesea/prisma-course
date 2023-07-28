@@ -1,6 +1,6 @@
 import prisma from "@/lib/prisma";
 
-export async function PATCH() {
+export async function POST() {
   const withDrawUpdate = prisma.post.update({
     where: {
       id: 1,

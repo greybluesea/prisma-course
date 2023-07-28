@@ -3,17 +3,17 @@ import prisma from "@/lib/prisma";
 export async function GET() {
   /*  const users = await prisma.user.findMany({
     where: {
-      OR: [
+      AND: [
         {
           id: {
             not: {
-              gt: 1,
+              gt: 2,
             },
           },
         },
         {
           name: {
-            startsWith: "s",
+            endsWith: "k",
           },
         },
       ],
@@ -24,7 +24,7 @@ export async function GET() {
     where: {
       posts: {
         none: {
-          published: false,
+          published: true,
         },
       },
     },

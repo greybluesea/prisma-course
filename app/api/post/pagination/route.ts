@@ -18,7 +18,7 @@ import prisma from "@/lib/prisma";
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const cursor = +(searchParams.get("cursor") ?? 1);
-  const size = +(searchParams.get("size") ?? 3);
+  const size = +(searchParams.get("size") ?? 2);
 
   const posts = await prisma.post.findMany({
     cursor: {

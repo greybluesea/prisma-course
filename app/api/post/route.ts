@@ -1,12 +1,13 @@
 import prisma from "@/lib/prisma";
 
 export async function GET() {
-  /*   const posts = await prisma.post.findMany({
+  /* const posts = await prisma.post.findMany({
     where: {
       OR: [
         {
           title: {
-            contains: "Github",
+            contains: "github",
+            mode: "insensitive",
           },
         },
         {
@@ -35,6 +36,7 @@ export async function GET() {
         },
       },
     },
+    // include: { author: true },
     select: {
       title: true,
       author: {

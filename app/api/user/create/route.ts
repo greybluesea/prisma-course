@@ -5,7 +5,7 @@ interface NewUser {
   email: string;
 }
 
-export async function POST() {
+/* export async function POST() {
   const createdUser = await prisma.user.create({
     data: {
       email: "greybluesea@gmail.com",
@@ -36,7 +36,7 @@ export async function POST() {
   });
 
   return new Response(JSON.stringify(createdUser));
-}
+} */
 
 /* export async function POST() {
   const createdUsers = await prisma.user.createMany({
@@ -55,9 +55,9 @@ export async function POST() {
   return new Response(JSON.stringify(createdUsers));
 } */
 
-/* export async function POST(req: Request) {
+export async function POST(req: Request) {
   const newUser: NewUser = await req.json();
   const newUserCreated = await prisma.user.create({ data: newUser });
 
   return new Response(JSON.stringify(newUserCreated));
-} */
+}
