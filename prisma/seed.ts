@@ -26,6 +26,7 @@ const userData: Prisma.UserCreateInput[] = [
         },
         {
           title: "Follow Prisma on Twitter",
+          likeNum: 8,
           categories: {
             connect: [
               {
@@ -45,6 +46,7 @@ const userData: Prisma.UserCreateInput[] = [
       create: [
         {
           title: "Follow Prisma on Twitter",
+          likeNum: 7,
           categories: {
             connect: [
               {
@@ -64,7 +66,7 @@ const userData: Prisma.UserCreateInput[] = [
       create: [
         {
           title: "Ask a question about Prisma on GitHub",
-
+          likeNum: 5,
           published: true,
           categories: {
             connect: [
@@ -76,6 +78,7 @@ const userData: Prisma.UserCreateInput[] = [
         },
         {
           title: "Prisma on YouTube",
+          likeNum: 2,
           categories: {
             connect: [
               {

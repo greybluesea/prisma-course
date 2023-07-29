@@ -1,34 +1,34 @@
 import prisma from "@/lib/prisma";
 
 export async function GET() {
-  /*  const users = await prisma.user.findMany({
+  const users = await prisma.user.findMany({
     where: {
-      AND: [
+      OR: [
         {
           id: {
             not: {
-              gt: 2,
+              gt: 1,
             },
           },
         },
         {
           name: {
-            endsWith: "k",
+            startsWith: "s",
           },
         },
       ],
     },
-  }); */
+  });
 
-  const users = await prisma.user.findMany({
+  /*  const users = await prisma.user.findMany({
     where: {
       posts: {
         none: {
-          published: true,
+          published: false,
         },
       },
     },
-  });
+  });*/
 
   return new Response(JSON.stringify(users));
 }

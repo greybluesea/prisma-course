@@ -15,7 +15,7 @@ export async function PUT(
       id: +params.id,
     },
     update: {
-      name: "userFounded",
+      name: "userFound",
     },
     create: {
       name: "newUserCreated",
